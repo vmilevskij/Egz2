@@ -5,8 +5,7 @@
     <classes>
       <class name="testai.tests">
         <methods>
-          <include name="regNegative"/>
-          <include name="TearDown"/>
+          <include name="regPositive"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- testai.tests -->

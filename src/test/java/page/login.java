@@ -2,8 +2,7 @@ package page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-
+import org.testng.Assert;
 
 public class login extends pageparameters {
 	
@@ -25,9 +24,9 @@ public class login extends pageparameters {
 		
 		driver.findElement(loginBtn).click();
 	}
-
-//	public void isOK() {
-//		String note = driver.findElement(loginConf).getText();
-//		Assert.assertEquals("Logout, Adolfas", note);
-//	}
+	
+	public void isOK() {
+		String note = driver.findElement(loginConf).getText();
+		Assert.assertEquals("Logout, Adolfas", note);
+	}
 }

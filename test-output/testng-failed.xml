@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [PirmasSuite]">
-  <test thread-count="5" name="PirmasTestasRegistracija(failed)">
-    <classes>
-      <class name="testai.tests">
-        <methods>
-          <include name="regPositive"/>
-          <include name="regNegative"/>
-          <include name="TearDown"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- testai.tests -->
-    </classes>
-  </test> <!-- PirmasTestasRegistracija(failed) -->
-  <test thread-count="5" name="AntrasTestasPrisijungti(failed)">
+  <test thread-count="5" name="AntrasTestasNegative(failed)">
     <classes>
       <class name="testai.tests">
         <methods>
           <include name="loginPageNeg"/>
-          <include name="TearDown"/>
           <include name="Setup"/>
-          <include name="loginPage"/>
         </methods>
       </class> <!-- testai.tests -->
     </classes>
-  </test> <!-- AntrasTestasPrisijungti(failed) -->
-  <test thread-count="5" name="TreciasTestasAtsijungimas(failed)">
-    <classes>
-      <class name="testai.tests">
-        <methods>
-          <include name="TearDown"/>
-          <include name="Setup"/>
-          <include name="loginPageOut"/>
-        </methods>
-      </class> <!-- testai.tests -->
-    </classes>
-  </test> <!-- TreciasTestasAtsijungimas(failed) -->
+  </test> <!-- AntrasTestasNegative(failed) -->
 </suite> <!-- Failed suite [PirmasSuite] -->

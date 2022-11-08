@@ -1,5 +1,7 @@
 package page;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,6 +15,8 @@ public class registerNewNegative extends pageparameters{
 	By passwordConfirm = By.id("passwordConfirm");
 	By errornote = By.id ("username.errors");
 	By buttonSignIn = By.cssSelector("#userForm > button");
+	//pranesimo lokatorius
+	By check = By.cssSelector("#username\\.errors");
 
 	
 	//konstruktorius
@@ -20,8 +24,9 @@ public class registerNewNegative extends pageparameters{
 		this.driver=driver;
 		}
 	//metodai
-	public void ClickButton() {
-		
+	
+	public void ClickButton() throws InterruptedException {
+		Thread.sleep(3000);
 		driver.findElement(createnew).click();
 	}
 	
@@ -35,13 +40,22 @@ public class registerNewNegative extends pageparameters{
 	public void Clickbtn() {
 		driver.findElement(buttonSignIn).click();
 	}
-
-	public void isErrorOK() {
+	
+	public void clean() {
+		driver.findElement(fieldUserName).clear();
+		driver.findElement(fieldUserPsw).clear();
+		driver.findElement(passwordConfirm).clear();
+		
+		
+	}
+	//sukuriame metoda
+	public void patikrinti () {
+		//paimame teksta
+		String a = driver.findElement(check).getText();
+		//kokio teksto tikimes
+		assertEquals("Privaloma įvesti nuo 3 iki 32 simbolių",a);
+		//isvedame i konsole
+		System.out.println("Testas pavyko(negative).Vartotojas neprisijunge nes neatitiko prisijungimo parametru "  +  a);
 	}
 	
-/*	public void isErrorOK() {
-		String note = driver.findElement(errornote).getText();
-		Assert.assertEquals("Privaloma įvesti nuo 3 iki 32 simbolių", note);
-	}
-*/
 }

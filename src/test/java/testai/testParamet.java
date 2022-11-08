@@ -1,18 +1,15 @@
 package testai;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
-
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeTest;
 
 public class testParamet {
 	
 	protected static WebDriver driver;
 	
-	@BeforeClass
+	@BeforeTest
 	public static void Setup() {
 		
 		
@@ -23,7 +20,7 @@ public class testParamet {
 		driver.manage().window().maximize();
 	}
 	
-	@AfterClass
+	@AfterSuite
 	public void TearDown() {
 		driver.close();
 	}

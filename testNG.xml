@@ -1,20 +1,21 @@
 <suite name="PirmasSuite">
-	<test name="PirmasTestasRegistracija">
+	<test name="PirmasTestasPositive">
 		<classes>
 			<class name="testai.tests">
 				<methods>
 					<include name="regPositive"/>
-					<include name="regNegative"/>
+					<include name="loginPage"/>
 				</methods>
 			</class>
 		</classes>
 	</test>
-	<test name="AntrasTestasPrisijungti">
+	<test name="AntrasTestasNegative">
 		<classes>
 			<class name="testai.tests">
 				<methods>
-					<include name="loginPage"/>
+					<include name="regNegative"/>
 					<include name="loginPageNeg"/>
+					
 				</methods>
 			</class>
 		</classes>
